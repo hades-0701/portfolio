@@ -1,0 +1,19 @@
+import { useWalletModal } from '@solana/wallet-adapter-react-ui'
+
+export default function ConnectButton() {
+  const { setVisible } = useWalletModal()
+
+  return (
+    <button
+      className="flex h-[27px] flex-1 items-center justify-center gap-2.5 rounded-[6px] bg-btn-connect bg-[length:100%_130%] px-6 text-center font-secondary text-[16px] font-normal uppercase leading-6 tracking-[0.01em] text-[#95DBD5] transition-all duration-300 hover:bg-[length:100%_120%] lg:h-[57px] lg:rounded-[12px] lg:text-[35px]"
+      onClick={() => {
+        setVisible(true)
+      }}
+    >
+      Connect
+      <div className="h-3 w-3 lg:h-6 lg:w-6">
+        <img src="/icons/mint-logo.svg" alt="" />
+      </div>
+    </button>
+  )
+}
